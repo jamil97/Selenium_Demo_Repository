@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-19 00:06:17</p>
+                <p class='attribute'><strong>Duration: </strong>22.57 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 1, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.GoogleSearchTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_google_search</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_website_element</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010248ad3c chromedriver + 4222268
+1   chromedriver                        0x00000001024118e8 chromedriver + 3725544
+2   chromedriver                        0x00000001020c7da4 chromedriver + 277924
+3   chromedriver                        0x00000001021031b8 chromedriver + 520632
+4   chromedriver                        0x000000010213b618 chromedriver + 751128
+5   chromedriver                        0x00000001020f58f0 chromedriver + 465136
+6   chromedriver                        0x00000001020f6974 chromedriver + 469364
+7   chromedriver                        0x000000010245b788 chromedriver + 4028296
+8   chromedriver                        0x000000010245fc1c chromedriver + 4045852
+9   chromedriver                        0x0000000102465c98 chromedriver + 4070552
+10  chromedriver                        0x00000001024608d8 chromedriver + 4049112
+11  chromedriver                        0x0000000102437d84 chromedriver + 3882372
+12  chromedriver                        0x000000010247e720 chromedriver + 4171552
+13  chromedriver                        0x000000010247e878 chromedriver + 4171896
+14  chromedriver                        0x0000000102492014 chromedriver + 4251668
+15  libsystem_pthread.dylib             0x0000000195c1a06c _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000195c14e2c thread_start + 8
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/Users/jamil.villeda/Desktop/Vessel/Selenium_Testing/main.py", line 37, in test_website_element
+    testApp.open_MockUp_Page(self, self.driver, 'https://www.example.com/')
+  File "/Users/jamil.villeda/Desktop/Vessel/Selenium_Testing/testApp.py", line 15, in open_MockUp_Page
+    testPO.verify_Page_Elements(self, driver)
+  File "/Users/jamil.villeda/Desktop/Vessel/Selenium_Testing/testPO.py", line 33, in verify_Page_Elements
+    element = wait.until(EC.presence_of_element_located((By.TAG_NAME, 'img')))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010248ad3c chromedriver + 4222268
+1   chromedriver                        0x00000001024118e8 chromedriver + 3725544
+2   chromedriver                        0x00000001020c7da4 chromedriver + 277924
+3   chromedriver                        0x00000001021031b8 chromedriver + 520632
+4   chromedriver                        0x000000010213b618 chromedriver + 751128
+5   chromedriver                        0x00000001020f58f0 chromedriver + 465136
+6   chromedriver                        0x00000001020f6974 chromedriver + 469364
+7   chromedriver                        0x000000010245b788 chromedriver + 4028296
+8   chromedriver                        0x000000010245fc1c chromedriver + 4045852
+9   chromedriver                        0x0000000102465c98 chromedriver + 4070552
+10  chromedriver                        0x00000001024608d8 chromedriver + 4049112
+11  chromedriver                        0x0000000102437d84 chromedriver + 3882372
+12  chromedriver                        0x000000010247e720 chromedriver + 4171552
+13  chromedriver                        0x000000010247e878 chromedriver + 4171896
+14  chromedriver                        0x0000000102492014 chromedriver + 4251668
+15  libsystem_pthread.dylib             0x0000000195c1a06c _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000195c14e2c thread_start + 8
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 1, Error: 1 -- Duration: 22.57 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
